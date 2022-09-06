@@ -9,4 +9,3 @@
 
 ### Run tests (development mode)
     npm run test
-    

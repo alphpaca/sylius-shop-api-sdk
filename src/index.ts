@@ -1,4 +1,5 @@
 export default function sum(...numbers: number[]) {
+    console.log('dupa123 1234123')
     return numbers.reduce((total, number) => total + number, 0)
 }
 
