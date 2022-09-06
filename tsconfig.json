@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES5",
+    "module": "esnext",    
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./dist/lib/es6",
+    "types": [
+      "vitest/importMeta"
+    ],
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "tests/*"
+  ]
+}
