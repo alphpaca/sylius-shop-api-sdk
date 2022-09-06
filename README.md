@@ -1,25 +1,12 @@
-# ts-boilerplate
-
-    Vscode TS and test debugging
-    Typescript
-    Nodemon
-    Mocha
-    Sinon
-    Chai
-    TSLint
+# Alphpaca - Sylius Api SDK
 
 ### Install
-
+    git clone 
     npm install
 
-### Run
+### Compile
+    npm run compile
 
-    npm start
-
-### Run tests
-
-    npm test
-
-### Linting
-
-    npm run lint
+### Run tests (development mode)
+    npm run test
+    
