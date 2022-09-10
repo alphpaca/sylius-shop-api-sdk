@@ -5,6 +5,11 @@
     "module": "esnext",    
     "declaration": true,
     "sourceMap": true,
+    "lib": [
+      "es5",
+      "dom",
+      "es2015.promise"
+  ],
     "outDir": "./dist/lib/es6",
     "types": [
       "vitest/importMeta"
