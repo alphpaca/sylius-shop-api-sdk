@@ -1,5 +1,4 @@
 import SyliusConfig, {baseConfig} from "./config"
-import { fetch } from '../node_modules/cross-fetch';
 import TestService from "./services/testService"
 
 class Sylius {
