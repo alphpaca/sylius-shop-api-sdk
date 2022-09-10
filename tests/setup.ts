@@ -2,4 +2,3 @@
   
   // Add `fetch` polyfill.
   global.fetch = fetch;
-  

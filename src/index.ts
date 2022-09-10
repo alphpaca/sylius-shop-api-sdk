@@ -1,15 +1,15 @@
-import SyliusConfig, {baseConfig} from "./config"
-import TestService from "./services/testService"
+import Client from "./fetch"
+import Product from "./resources/product"
 
 class Sylius {
-    public config: SyliusConfig
-    
-    public test: TestService
+    private client: Client
 
-    constructor(providedConfig?: baseConfig){
-        this.config = new SyliusConfig(providedConfig)
+    public product: Product;
 
-        this.test = new TestService(this.config)
+    constructor() {
+        this.client = new Client();
+
+        this.product = new Product(this.client)
     }
 
 }
