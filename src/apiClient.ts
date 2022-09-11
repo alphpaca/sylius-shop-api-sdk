@@ -38,8 +38,6 @@ class Client {
           controller.abort();
         }, timeoutInSeconds * 1000);
 
-        console.log(fullPath)
-
         const response: Response = await fetch(
           fullPath,
           {
