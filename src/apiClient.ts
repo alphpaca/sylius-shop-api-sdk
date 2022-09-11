@@ -24,24 +24,24 @@ class Client {
     path: string,
     params: Record<string, any> = {},
     payload: Record<string, any> = {},
-    timeoutInSeconds: number = 3,
-  ): Promise<any> {
-    let response: Response;
-    let controller: AbortController;
+    timeoutInSeconds: number = 10,
+  ): Promise<unknown> {
+    const fullPath = this.config.baseUrl + path + stringify(params, { arrayFormat: 'bracket' });
 
     for (let n = 0; n < this.config.maxRetries; n++) {
       let timeoutID;
 
       try {
-        controller = new AbortController();
+        const controller: AbortController = new AbortController();
 
         timeoutID = setTimeout(() => {
           controller.abort();
         }, timeoutInSeconds * 1000);
 
-        response = await fetch(
-          this.config.baseUrl + path + stringify(params, { arrayFormat: 'bracket' }),
+        console.log(fullPath)
 
+        const response: Response = await fetch(
+          fullPath,
           {
             method,
             headers: {
@@ -54,14 +54,11 @@ class Client {
         );
 
         clearTimeout(timeoutID);
+
         return response;
       } catch (error) {
         if (timeoutID) {
           clearTimeout(timeoutID);
-        }
-
-        if (!(error instanceof DOMException)) {
-          throw error;
         }
       }
     }

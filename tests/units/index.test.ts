@@ -1,11 +1,11 @@
-import Sylius from "../../src/index";
-import { describe, expect, isFirstRun, it} from "vitest"
+import Sylius from '../../src/index'
+import { describe, expect, isFirstRun, it } from "vitest"
 
-describe("test1", ()=>{
+describe("test1", () => {
     it("run test class", async () => {
         const SDK = new Sylius();
 
-        await SDK.test.testMethod('/locales')
+        await SDK.product.retrieve()
     })
 
 })
