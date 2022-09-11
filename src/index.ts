@@ -1,4 +1,4 @@
-import Client from "./fetch"
+import Client from "./apiClient"
 import Product from "./resources/product"
 
 class Sylius {

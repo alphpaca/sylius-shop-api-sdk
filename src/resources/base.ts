@@ -1,4 +1,4 @@
-import Client from "../fetch"
+import Client from "../apiClient"
 
 export default class BaseResource {
   public client: Client
